@@ -10,8 +10,10 @@
     "scrape-results": "node src/scripts/scrape-prashnavali.js"
   },
   "dependencies": {
+    "@microsoft/clarity": "^1.0.2",
     "classnames": "^2.5.1",
     "next": "16.1.6",
+    "next-pwa": "^5.6.0",
     "playwright": "^1.58.2",
     "react": "19.2.3",
     "react-dom": "19.2.3"
