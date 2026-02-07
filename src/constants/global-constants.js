@@ -1,0 +1,1 @@
+export const BUTTONS_PER_ROW = 15;
