@@ -1,7 +1,7 @@
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, phone, loanType, amount, city } = body;
+    const { name, phone, loanType, amount, city, intent, source, type, pathCity } = body;
 
     if (!name || !phone) {
       return Response.json(
@@ -20,7 +20,7 @@ export async function POST(req) {
         },
         body: JSON.stringify({
           data: [
-            { createdAt, name, phone, loanType, amount, city }
+            { createdAt, name, phone, loanType, amount, city, intent, source, type, pathCity }
           ],
         }),
       }
