@@ -62,6 +62,10 @@ export async function generateMetadata({ params }) {
       type: "website",
     },
 
+    alternates: {
+      canonical: `https://www.ram-prashnavali.com/loans/${params.slug}`,
+    },
+
     twitter: {
       card: "summary_large_image",
       title: `${capitalizeFirstLetter(formattedIntent)} ${formattedType} in ${formattedCity} | Apply Now`,

@@ -2,24 +2,24 @@ const types = ["personal-loan", "home-loan", "business-loan"];
 
 const intents = [
   "instant",
-  "low-interest",
-  "quick",
-  "urgent",
-  "best",
-  "fast-approval",
-  "lowest-interest",
-  "apply-online",
+//   "low-interest",
+//   "quick",
+//   "urgent",
+//   "best",
+//   "fast-approval",
+//   "lowest-interest",
+//   "apply-online",
 ];
 
 const cities = [
   "bangalore","delhi","mumbai","pune","hyderabad","chennai","kolkata",
-  "ahmedabad","jaipur","lucknow","kanpur","nagpur","indore","bhopal",
-  "patna","ludhiana","agra","nashik","vadodara","meerut","rajkot",
-  "varanasi","srinagar","aurangabad","dhanbad","amritsar","allahabad",
-  "ranchi","coimbatore","jabalpur","gwalior","vijayawada","madurai",
-  "raipur","kota","guwahati","chandigarh","solapur","hubli","mysore",
-  "tiruchirappalli","bareilly","aligarh","tiruppur","moradabad",
-  "jalandhar","bhubaneswar","salem","warangal","guntur"
+//   "ahmedabad","jaipur","lucknow","kanpur","nagpur","indore","bhopal",
+//   "patna","ludhiana","agra","nashik","vadodara","meerut","rajkot",
+//   "varanasi","srinagar","aurangabad","dhanbad","amritsar","allahabad",
+//   "ranchi","coimbatore","jabalpur","gwalior","vijayawada","madurai",
+//   "raipur","kota","guwahati","chandigarh","solapur","hubli","mysore",
+//   "tiruchirappalli","bareilly","aligarh","tiruppur","moradabad",
+//   "jalandhar","bhubaneswar","salem","warangal","guntur"
 ];
 
 export const seoSlugs = [];
