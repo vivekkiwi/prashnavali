@@ -1,6 +1,12 @@
 // 🔥 Slug parser
+const DEFAULT_VALUES = {
+  intent: "instant",
+  type: "personal-loan",
+  city: "india",
+};
+
 function parseSlug(slug) {
-  if (!slug) return null;
+  if (!slug) return DEFAULT_VALUES;
 
   const cleanSlug = slug?.toLowerCase()?.trim();
   const [beforeIn, city] = cleanSlug?.split("-in-");

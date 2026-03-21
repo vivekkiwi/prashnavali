@@ -1,18 +1,14 @@
 import capitalizeFirstLetter from "@/app/utils/capitalize-first-letter";
-import parseSlug from "@/app/utils/parse-slug";
 import Loans from "@/components/Loans";
-import { seoSlugs } from "@/data/seoSlugs";
-import { notFound } from "next/navigation";
 
-export default async function LoansPage({ params }) {
-  const { slug } = await params;
-  const parsed = parseSlug(slug);
+const DEFAULT_VALUES = {
+  intent: "instant",
+  type: "Loan",
+  city: "India",
+};
 
-  console.log("Parsed values : ", parsed);
-
-  if (!parsed) return notFound();
-
-  const { intent, type, city } = parsed;
+export default async function LoansPage() {
+  const { intent, type, city } = DEFAULT_VALUES;
   const formattedType = type?.replace(/-/g, " ");
   const formattedCity =
     city?.charAt(0)?.toUpperCase() + city?.slice(1);
@@ -28,14 +24,8 @@ export default async function LoansPage({ params }) {
 }
 
 // 🔥 METADATA FUNCTION
-export async function generateMetadata({ params }) {
-  const { slug } = await params;
-  const parsed = parseSlug(slug);
-
-  if (!parsed) return {};
-
-  const { intent, type, city } = parsed;
-
+export async function generateMetadata() {
+  const { intent, type, city } = DEFAULT_VALUES;
   const formattedType = type.replace(/-/g, " ");
   const formattedCity =
     city.charAt(0).toUpperCase() + city.slice(1);
@@ -54,13 +44,13 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${capitalizeFirstLetter(formattedIntent)} ${formattedType} in ${formattedCity} | Apply Now`,
       description: `Get ${capitalizeFirstLetter(formattedIntent)} ${formattedType} in ${formattedCity} with lowest interest rates, fast approval, and minimal documentation.`,
-      url: `https://www.ram-prashnavali.com/loans/${slug}`,
+      url: `https://www.ram-prashnavali.com/loans`,
       siteName: "Ram Prashnavali",
       type: "website",
     },
 
     alternates: {
-      canonical: `https://www.ram-prashnavali.com/loans/${slug}`,
+      canonical: `https://www.ram-prashnavali.com/loans`,
     },
 
     twitter: {
